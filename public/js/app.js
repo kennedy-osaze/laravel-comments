@@ -2015,13 +2015,11 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       this.submitted = true;
-      console.log(this.comment);
       this.$store.dispatch('ADD_COMMENT', this.comment).then(function (response) {
         _this.submitted = false;
-        console.log(response);
       })["catch"](function (error) {
         _this.submitted = false;
-        console.log(error.response);
+        console.error(error);
       });
     }
   }

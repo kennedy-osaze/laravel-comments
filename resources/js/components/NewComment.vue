@@ -42,14 +42,14 @@ export default {
     methods: {
         postComment() {
             this.submitted = true;
-            console.log(this.comment);
+
             this.$store.dispatch('ADD_COMMENT', this.comment)
                 .then(response => {
                     this.submitted = false;
-                    console.log(response);
                 }).catch(error => {
                     this.submitted = false;
-                    console.log(error.response);
+
+                    console.error(error);
                 });
         }
     }
