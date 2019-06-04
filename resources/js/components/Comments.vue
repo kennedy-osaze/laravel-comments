@@ -29,8 +29,8 @@ export default {
 
         Pusher.logToConsole = true;
 
-        let pusher = new Pusher('dbe8d33de6e0e712eb1b', {
-            cluster: 'mt1',
+        let pusher = new Pusher(process.env.MIX_PUSHER_APP_KEY, {
+            cluster: process.env.MIX_PUSHER_APP_CLUSTER,
             encrypted: false
         });
 
